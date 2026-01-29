@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  html, body, #root {
+    @apply h-full overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+}
